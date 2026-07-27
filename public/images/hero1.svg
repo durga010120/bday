@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#002B49"/>
+  <circle cx="200" cy="130" r="90" fill="#E62429"/>
+  <!-- Web pattern -->
+  <path d="M200,40 L200,220 M110,130 L290,130 M136,66 L264,194 M136,194 L264,66" stroke="#000" stroke-width="3" opacity="0.4"/>
+  <!-- Eyes -->
+  <path d="M145,115 C160,105 185,112 192,130 C185,142 165,145 145,115 Z" fill="#FFF" stroke="#000" stroke-width="5"/>
+  <path d="M255,115 C240,105 215,112 208,130 C215,142 235,145 255,115 Z" fill="#FFF" stroke="#000" stroke-width="5"/>
+  <rect x="20" y="240" width="360" height="45" rx="10" fill="#FFCC00"/>
+  <text x="200" y="270" font-family="sans-serif" font-weight="900" font-size="22" fill="#000" text-anchor="middle">SUPERHERO MEMORY #1: WEB SLINGER!</text>
+</svg>

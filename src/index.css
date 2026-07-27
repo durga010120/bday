@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F8FAF9;
+    background-image: 
+      radial-gradient(rgba(230, 36, 41, 0.15) 1.5px, transparent 0),
+      radial-gradient(rgba(0, 0, 0, 0.06) 1.5px, transparent 0);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    color: #111827;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Comic Fonts */
+.font-bangers {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.05em;
+}
+
+.font-luckiest {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 0.04em;
+}
+
+/* 3D Comic Text Shadows */
+.comic-text-shadow-red {
+  text-shadow: 
+    3px 3px 0px #000000,
+    -1px -1px 0 #000000,  
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,
+    5px 5px 0px #E62429;
+}
+
+.comic-box-shadow {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.comic-box-shadow-red {
+  box-shadow: 6px 6px 0px #E62429;
+}
+
+.comic-box-shadow-gold {
+  box-shadow: 6px 6px 0px #FFCC00;
+}
+
+.comic-border {
+  border: 4px solid #000000;
+}
+
+/* Button Shiny Glimmer Overlay */
+.btn-shine-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine-overlay::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shineSweep 3s infinite ease-in-out;
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -60%;
+  }
+  20%, 100% {
+    left: 140%;
+  }
+}
+
+/* Floating Particle Animation */
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(6deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatParticle 4s infinite ease-in-out;
+}
+
+.animate-float-fast {
+  animation: floatParticle 2.2s infinite ease-in-out;
+}
+
+/* Web Border Glow */
+@keyframes webGlowRedWhite {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(230, 36, 41, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.8);
+    border-color: #E62429;
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(230, 36, 41, 0.8), inset 0 0 12px rgba(230, 36, 41, 0.6);
+    border-color: #000000;
+  }
+}
+
+.animate-web-glow {
+  animation: webGlowRedWhite 3s infinite ease-in-out;
+}
+
+/* Flame Flickering */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px #FFCC00);
+  }
+  25% {
+    transform: scale(1.18) rotate(4deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 16px #FF3300);
+  }
+  50% {
+    transform: scale(0.88) rotate(-1deg);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 6px #FFCC00);
+  }
+  75% {
+    transform: scale(1.12) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px #FF9900);
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 0.5s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Spider-Sense Pulse */
+@keyframes spideySense {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+}
+
+.animate-spidey-sense {
+  animation: spideySense 1.5s infinite ease-in-out;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #E62429;
+  border-radius: 4px;
+}
